@@ -25,7 +25,7 @@ export default async function handler(req, res) {
 
   // Build Lofty URL with any remaining query params
   const qs = new URLSearchParams(queryParams).toString();
-  const loftyUrl = `https://crm.lofty.com${path}${qs ? '?' + qs : ''}`;
+  const loftyUrl = `https://api.lofty.com${path}${qs ? '?' + qs : ''}`;
 
   try {
     const loftyRes = await fetch(loftyUrl, {
